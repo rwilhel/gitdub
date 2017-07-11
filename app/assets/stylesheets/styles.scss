@@ -1,0 +1,55 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+}
+
+#user-image {
+  height: 230px;
+  width: 230px;
+  border-radius: 25px;
+}
+
+div.col-3 {
+  margin-left: 50px;
+}
+
+div.user_name {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+div.user_nickname {
+  font-size: 1.5em;
+  color: gray;
+  margin-top: -10px;
+}
+
+div.col-9 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  display: inline;
+  float: right;
+  margin-right: 200px;
+}
+
+div.repo-link {
+  float:left;
+  margin-right: 20px;
+}
+
+div.starred-repo-link {
+  float:left;
+  margin-right: 20px;
+}
+
+div.following-link {
+  float:left;
+  margin-right: 20px;
+}
+
+div.followers-link {
+  float:left;
+}

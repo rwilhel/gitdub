@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section class='feed'>
+        <h1><%= current_user.name %>'s Recent Activity: </h1>
+          <% @events.each do |event| %>
+            <ul class='ind_event'>
+              <li>
+                <%= event.type %>
+                <%= link_to "#{event.repo_name}", "#{event.repo_url}" %>
+                Date of Activity: <%= event.created_at %>
+              </li>
+            </ul>
+           <% end %>
+      </section>
+    </div>
+  </div>
+</div>

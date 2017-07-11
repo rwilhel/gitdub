@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1><%= current_user.name %>'s Repositories</h1>
+      <% @repos.each do |repo| %>
+        <ul class='user-repos'>
+          <li>
+            <h3><%= link_to "#{repo.name}", "#{repo.url}" %></h3>
+            Language: <%= repo.language %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

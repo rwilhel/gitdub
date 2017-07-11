@@ -1,0 +1,18 @@
+<%=render partial: 'dashboard/navbar' %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section class='follower-page'>
+        <h1><%= current_user.name %>'s Followers: </h1>
+          <% @followers.each do |follower| %>
+            <ul class='follower'>
+              <img id='follower-user' src="<%= follower.avatar %>">
+              <li><%= follower.user %> -- <%= link_to "View Github Profile", "#{follower.url}"%></li>
+            </ul>
+          <% end %>
+          <br>
+          <%= link_to "Back to Dash", dashboard_path %>
+      </section>
+    </div>
+  </div>
+</div>

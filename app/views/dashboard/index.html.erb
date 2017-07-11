@@ -1,0 +1,30 @@
+<%=render partial: 'dashboard/navbar' %>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <img id='user-image' src="<%= current_user.avatar_url %>"/>
+      <div class="user_name">
+        <%= current_user.name %>
+      </div>
+      <div class="user_nickname">
+        <%= current_user.nickname %>
+      </div>
+      <br>
+      <div class="user-orgs">
+        <%= link_to "Organizations", organizations_path %>
+      </div>
+      <br>
+      <div class="bio_link">
+        <%= link_to "Add a bio", "https://github.com/settings/profile?focus_bio=1" %>
+      </div>
+    </div>
+    <div class="col-9">
+        <div class='repo-link'><%= link_to "Repos", repos_path %></div>
+        <div class='starred-repo-link'><%= link_to "Starred Repos", starred_repos_path %></div>
+        <div class='following-link'><%= link_to "Following", following_path %></div>
+        <div class='followers-link'><%= link_to "Followers", followers_path %></div>
+    </div>
+  </div>
+</div>

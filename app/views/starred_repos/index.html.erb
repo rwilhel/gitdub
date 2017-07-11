@@ -1,0 +1,18 @@
+<%=render partial: 'dashboard/navbar' %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1><%= current_user.name %>'s Starred Repositories</h1>
+      <% @starred_repos.each do |repo| %>
+        <ul class='starred'>
+          <li>
+            <h3><%= link_to "#{repo.name}", "#{repo.url}" %></h3>
+            <strong>Owner:</strong> <%= repo.owner %>
+          </li>
+        </ul>
+      <% end %>
+      <br>
+      <%= link_to "Back to Dash", dashboard_path %>
+    </div>
+  </div>
+</div>
